@@ -9,7 +9,7 @@ module.exports={
 	handleName:function(params){//通过name查找
 		var sql="";
 		for(var k in params){
-			if(!params[k]==""&& k=="name"){
+			if(params[k]!==""&& k=="name"){//params[k]是属性值，k是属性名
 				sql="AND "+k+" like '"+params[k]+"'";
 			}
 		}
@@ -18,7 +18,7 @@ module.exports={
 	handleId:function(params){//通过id查找
 		var sql="";
 		for(var k in params){
-			if(!params[k]==""&& k=="id"){
+			if(params[k]!==""&& k=="id"){
 				sql="AND "+k+" = '"+params[k]+"'";
 			}
 		}
@@ -27,7 +27,7 @@ module.exports={
 	handleCustom:function(params,custom){//自定义查找--custom为表格需要查找相应属性
 		var sql="";
 		for(var k in params){
-			if(!params[k]==""&& k==custom){
+			if(params[k]!==""&& k==custom){
 				sql="AND "+k+" = '"+params[k]+"'";
 			}
 		}
@@ -36,7 +36,7 @@ module.exports={
 	handleTime:function(params,custom){//时间判断,时间参数如“>2017-9-12”
 		var sql="";
 		for(var k in params){
-			if(!params[k]==""&& k==custom){
+			if(params[k]!==""&& k==custom){
 				sql="AND "+k+"'"+params[k]+"'";
 			}
 		}
