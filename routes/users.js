@@ -13,7 +13,7 @@ router.post('/add', function(req, res) {//添加用户
 		var o={};
 		o.result=e=null;
 		o.msg=o.r?"增加用户成功!":"增加用户失败!";
-		res.json(o);
+		res.json(o); 
 	})
 });
 
