@@ -1,4 +1,4 @@
-var db=require("./database");
+var db=require("./database");//究极无敌惊天大草
 var parameter=require("./parameter");
 
 module.exports={
